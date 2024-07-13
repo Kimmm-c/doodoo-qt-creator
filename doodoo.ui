@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Doodoo</class>
+ <widget class="QMainWindow" name="Doodoo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Doodoo</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionClear"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuBrush_Size">
+    <property name="title">
+     <string>Brush Size</string>
+    </property>
+    <addaction name="action2px"/>
+    <addaction name="action5px"/>
+    <addaction name="action10px"/>
+    <addaction name="action20px"/>
+    <addaction name="action50px"/>
+   </widget>
+   <widget class="QMenu" name="menuBrush_Color">
+    <property name="title">
+     <string>Brush Color</string>
+    </property>
+    <widget class="QMenu" name="menuRed">
+     <property name="title">
+      <string>Red</string>
+     </property>
+     <addaction name="actionCrimson"/>
+     <addaction name="actionMahogany"/>
+     <addaction name="actionTrue_Red"/>
+    </widget>
+    <widget class="QMenu" name="menuYellow">
+     <property name="title">
+      <string>Yellow</string>
+     </property>
+     <addaction name="actionFire_2"/>
+     <addaction name="actionOchre"/>
+     <addaction name="actionLemon"/>
+    </widget>
+    <widget class="QMenu" name="menuBlue">
+     <property name="title">
+      <string>Blue</string>
+     </property>
+     <addaction name="actionCerulean"/>
+     <addaction name="actionArtic"/>
+    </widget>
+    <widget class="QMenu" name="menuGreen">
+     <property name="title">
+      <string>Green</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="actionLime"/>
+     <addaction name="actionPear"/>
+     <addaction name="actionMoss"/>
+    </widget>
+    <addaction name="actionBlack"/>
+    <addaction name="actionWhite"/>
+    <addaction name="menuRed"/>
+    <addaction name="menuGreen"/>
+    <addaction name="menuBlue"/>
+    <addaction name="menuYellow"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuBrush_Size"/>
+   <addaction name="menuBrush_Color"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="action2px">
+   <property name="text">
+    <string>2px</string>
+   </property>
+  </action>
+  <action name="action5px">
+   <property name="text">
+    <string>5px</string>
+   </property>
+  </action>
+  <action name="action10px">
+   <property name="text">
+    <string>10px</string>
+   </property>
+  </action>
+  <action name="action20px">
+   <property name="text">
+    <string>20px</string>
+   </property>
+  </action>
+  <action name="action50px">
+   <property name="text">
+    <string>50px</string>
+   </property>
+  </action>
+  <action name="actionBlack">
+   <property name="text">
+    <string>Black</string>
+   </property>
+  </action>
+  <action name="actionWhite">
+   <property name="text">
+    <string>White</string>
+   </property>
+  </action>
+  <action name="actionFire_2">
+   <property name="text">
+    <string>Fire</string>
+   </property>
+  </action>
+  <action name="actionOchre">
+   <property name="text">
+    <string>Ochre</string>
+   </property>
+  </action>
+  <action name="actionLemon">
+   <property name="text">
+    <string>Lemon</string>
+   </property>
+  </action>
+  <action name="actionCerulean">
+   <property name="text">
+    <string>Cerulean</string>
+   </property>
+  </action>
+  <action name="actionArtic">
+   <property name="text">
+    <string>Artic</string>
+   </property>
+  </action>
+  <action name="actionLime">
+   <property name="text">
+    <string>Lime</string>
+   </property>
+  </action>
+  <action name="actionPear">
+   <property name="text">
+    <string>Pear</string>
+   </property>
+  </action>
+  <action name="actionMoss">
+   <property name="text">
+    <string>Moss</string>
+   </property>
+  </action>
+  <action name="actionCrimson">
+   <property name="text">
+    <string>Crimson</string>
+   </property>
+  </action>
+  <action name="actionMahogany">
+   <property name="text">
+    <string>Mahogany</string>
+   </property>
+  </action>
+  <action name="actionTrue_Red">
+   <property name="text">
+    <string>True Red</string>
+   </property>
+  </action>
+  <action name="actionClear">
+   <property name="text">
+    <string>Clear</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
