@@ -1,5 +1,4 @@
-#include "doodoo.h"
-
+#include "../include/doodoo.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])

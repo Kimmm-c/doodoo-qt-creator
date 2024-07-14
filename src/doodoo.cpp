@@ -1,4 +1,4 @@
-#include "doodoo.h"
+#include "../include/doodoo.h"
 #include "ui_doodoo.h"
 
 
