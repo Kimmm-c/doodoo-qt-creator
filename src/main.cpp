@@ -1,10 +1,13 @@
-#include "../include/doodoo.h"
-#include <QApplication>
+#include <QtWidgets>
+#include "DDMainWindow/DDMainWindow.h"
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Doodoo w;
-    w.show();
-    return a.exec();
+    QApplication doodoo(argc, argv);
+
+    DDMainWindow window;
+    window.show();
+
+
+    return doodoo.exec();
 }
