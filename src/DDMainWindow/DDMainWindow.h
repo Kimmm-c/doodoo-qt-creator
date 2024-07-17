@@ -2,9 +2,13 @@
 #define DD_MAIN_WINDOW_H
 
 #include <QMainWindow>
+#include <QToolButton>
+#include <QHBoxLayout>
+
 #include "../canvas/DDCanvas.h"
 #include "../menubar/DDMenuBar.h"
 #include "../toolbar/DDToolBar.h"
+
 #include <iostream>
 using namespace std;
 
@@ -17,12 +21,29 @@ public:
 
     void renderComponents();
 
+private slots:
+    void erase();
+    void resizeBrush();
+    void changeColor();
+    void updateToolBarOrientation(Qt::Orientation orientation);
+
 private:
     DDMenuBar *menuBar;
-    DDToolBar *mainToolBar;
+    QToolBar *mainToolBar;
     DDCanvas *canvas;
 
-    DDToolBar * createMainToolBar();
+    QAction *eraserAct;
+    QAction *resizeBrushAct;
+    QAction *changeColorAct;
+
+    QBoxLayout *toolBarLayout;
+    QWidget *rightAlignedToolContainer;
+    QToolButton *eraseButton;
+    QToolButton *resizeButton;
+    QToolButton *changeColorButton;
+
+
+    void createMainToolBar();
     DDCanvas * createCanvas();
 //    void addCanvas(DDCanvas *canvas);
 };
