@@ -11,7 +11,6 @@ DDMainWindow::DDMainWindow(QWidget *parent)
 
 DDMainWindow::~DDMainWindow()
 {
-    cout<<"calling ddmainwindow destructor"<<endl;
     delete menuBar;
     delete mainToolBar;
     delete canvas;

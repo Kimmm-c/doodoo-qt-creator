@@ -10,10 +10,7 @@ DDMenuBar::DDMenuBar(QWidget *parent)
 
 void DDMenuBar::initializeAction(QAction **action, const QString &label, void (DDMenuBar::*slot)())
 {
-    cout<<"action's address "<<action<<endl;
-    cout<<"action's value "<<*action<<endl;
     *action = new QAction(label, this);
-    cout<<"action's value after creating action"<<action<<endl;
     connect(*action, &QAction::triggered, this, slot);
 }
 
