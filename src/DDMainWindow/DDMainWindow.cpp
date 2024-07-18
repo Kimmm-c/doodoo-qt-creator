@@ -80,17 +80,25 @@ void DDMainWindow::createCanvas()
     centeredCanvas = new QWidget();
 
     // Initialize layout
-    canvasLayout = new QGridLayout(centeredCanvas);
+    canvasVLayout = new QVBoxLayout(centeredCanvas);
+    canvasHLayout = new QHBoxLayout();
 
     // Add canvas to layout
     canvas = new DDCanvasWidget(this);
-    canvasLayout->addWidget(canvas, 0, 0, Qt::AlignCenter);
+
+    canvasHLayout->addStretch();
+    canvasHLayout->addWidget(canvas, 0, Qt::AlignCenter);
+    canvasHLayout->addStretch();
+
+    canvasVLayout->addStretch();
+    canvasVLayout->addLayout(canvasHLayout);
+    canvasVLayout->addStretch();
 
     // Set layout as layout manager for centeredCanvas
-    centeredCanvas->setLayout(canvasLayout);
+    centeredCanvas->setLayout(canvasVLayout);
 
     // Central the widget in the main window
-    setCentralWidget(canvas);
+    setCentralWidget(centeredCanvas);
 }
 
 void DDMainWindow::erase()

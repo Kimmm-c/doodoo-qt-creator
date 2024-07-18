@@ -47,7 +47,8 @@ private:
 
     // Canvas
     QWidget *centeredCanvas;
-    QGridLayout *canvasLayout;
+    QVBoxLayout *canvasVLayout;
+    QHBoxLayout *canvasHLayout;
 
 
     void createMainToolBar();
