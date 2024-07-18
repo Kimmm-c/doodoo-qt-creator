@@ -4,8 +4,9 @@
 #include <QMainWindow>
 #include <QToolButton>
 #include <QHBoxLayout>
+#include <QImage>
 
-#include "../canvas/DDCanvas.h"
+#include "../canvas/DDCanvasWidget.h"
 #include "../menubar/DDMenuBar.h"
 #include "../toolbar/DDToolBar.h"
 
@@ -28,23 +29,30 @@ private slots:
     void updateToolBarOrientation(Qt::Orientation orientation);
 
 private:
+    // Menu
     DDMenuBar *menuBar;
     QToolBar *mainToolBar;
-    DDCanvas *canvas;
+    DDCanvasWidget *canvas;
 
     QAction *eraserAct;
     QAction *resizeBrushAct;
     QAction *changeColorAct;
 
+    // Toolbar
     QBoxLayout *toolBarLayout;
     QWidget *rightAlignedToolContainer;
     QToolButton *eraseButton;
     QToolButton *resizeButton;
     QToolButton *changeColorButton;
 
+    // Canvas
+    QWidget *centeredCanvas;
+    QGridLayout *canvasLayout;
+
 
     void createMainToolBar();
-    DDCanvas * createCanvas();
+    void createCanvas();
+//    DDCanvas * createCanvas();
 //    void addCanvas(DDCanvas *canvas);
 };
 

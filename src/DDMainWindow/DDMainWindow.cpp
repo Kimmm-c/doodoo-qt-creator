@@ -3,11 +3,10 @@
 DDMainWindow::DDMainWindow(QWidget *parent)
 : QMainWindow(parent)
 , menuBar(new DDMenuBar(this))
-, canvas(createCanvas())
 {
-    mainToolBar = addToolBar("Main Toolbar");
     createMainToolBar();
     renderComponents();
+    createCanvas();
 }
 
 DDMainWindow::~DDMainWindow()
@@ -31,6 +30,8 @@ void DDMainWindow::renderComponents() {
 
 void DDMainWindow::createMainToolBar()
 {
+    mainToolBar = addToolBar("Main Toolbar");
+
     // Initialize the rightAlignedWidget.
     // rightAlignedWidget contains a QHBoxLayout, which controls the arrangement of its child widgets.
     rightAlignedToolContainer = new QWidget();
@@ -73,10 +74,23 @@ void DDMainWindow::createMainToolBar()
     connect(mainToolBar, &QToolBar::orientationChanged, this, &DDMainWindow::updateToolBarOrientation);
 }
 
-DDCanvas * DDMainWindow::createCanvas()
+void DDMainWindow::createCanvas()
 {
-    auto ddCanvas = new DDCanvas();
-    return ddCanvas;
+    // Initialize CenteredCanvas
+    centeredCanvas = new QWidget();
+
+    // Initialize layout
+    canvasLayout = new QGridLayout(centeredCanvas);
+
+    // Add canvas to layout
+    canvas = new DDCanvasWidget(this);
+    canvasLayout->addWidget(canvas, 0, 0, Qt::AlignCenter);
+
+    // Set layout as layout manager for centeredCanvas
+    centeredCanvas->setLayout(canvasLayout);
+
+    // Central the widget in the main window
+    setCentralWidget(canvas);
 }
 
 void DDMainWindow::erase()
